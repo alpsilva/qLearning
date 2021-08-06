@@ -1,11 +1,5 @@
 from actions import move, choose_random_action
 
-def printMatrix(matrix):
-    for i in range(len(matrix)):
-        for j in range(len(matrix[i])):
-            print(matrix[i][j], "| ", end = '')
-        print('')
-
 def q_update(state, action, next_state, rw, q_matrix, alpha, gamma):
     # Atualiza a utilidade relacionada ao estado state e a ação action
     # Recompensa atual + utilidade esperada da melhor ação possível do proximo estado.
@@ -21,7 +15,7 @@ num_actions = 4 # 0..3
 
 actions_names = ['u', 'd', 'l', 'r']
 
-# No modelo q_matrix[2][0] -> Qualidade de andar para cima no estado 3
+# Exemplo: No modelo q_matrix[2][0] -> Qualidade de andar para cima no estado 3
 # Actions -> 0: up | 1: down | 2: left | 3: right
 
 # Inicializa q_matrix com zeros
